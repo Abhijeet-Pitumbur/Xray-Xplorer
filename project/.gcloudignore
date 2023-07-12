@@ -1,0 +1,13 @@
+# .gcloudignore
+.git
+.gitignore
+*.pyc
+__pycache__/
+
+# Ignore virtual environment directories
+venv/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp

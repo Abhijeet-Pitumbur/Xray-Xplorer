@@ -1,0 +1,44 @@
+<!-- Home page -->
+            <div id='homePage' class='home-page'>
+                <!-- Logo -->
+                <div class='logo no-select'>
+                    <img src='{{ url_for("static", filename="icons/logo.svg") }}' alt='Xray Xplorer' draggable='false'/>
+                </div>
+                <!-- Intro -->
+                <h1 class='intro-title'><span class='highlight-text'>COVID-19</span> Detection</h1>
+                <p class='intro-text'>Detect and visualize COVID-19 in chest X-ray images. <span class='highlight-underline-text'>Powered by AI.</span></p>
+                <!-- Upload box -->
+                <div class='upload-box'>
+                    <img class='upload-box-icon no-select' src='{{ url_for("static", filename="icons/image.svg") }}' alt='Image' draggable='false'/>
+                    <!-- Upload button -->
+                    <label class='upload-button-label no-select' for='uploadButton'><img class='upload-button-icon' src='{{ url_for("static", filename="icons/upload.svg") }}' alt='Upload' draggable='false'/>Upload Chest X-Ray Image</label>
+                    <input id='uploadButton' class='upload-button' type='file' accept='image/png, image/jpeg, image/webp'/>
+                    <p class='alternative-upload-text'>You can also paste or drag-and-drop an image</p>
+                </div>
+                <!-- Random example -->
+                <div class='random-example'>
+                    <p>Don't have a chest X-ray image?</p>
+                    <!-- Random example button -->
+                    <button id='randomExampleButton' class='random-example-button no-select' tabindex='-1'><img class='random-example-button-icon' src='{{ url_for("static", filename="icons/random.svg") }}' alt='Random Example' draggable='false'/>Try a Random Example</button>
+                </div>
+                <!-- Footer -->
+                <div class='footer'>
+                    <!-- Footer buttons -->
+                    <div class='footer-buttons-container no-select'>
+                        <a class='footer-tooltip' data-footer-tooltip='View source code on GitHub' href='https://github.com/Abhijeet-Pitumbur/Xray-Xplorer' target='_blank' draggable='false' tabindex='-1'>
+                            <img class='footer-button' src='{{ url_for("static", filename="icons/github.svg") }}' alt='GitHub' draggable='false'/>
+                        </a>
+                        <a class='footer-tooltip' data-footer-tooltip='View Jupyter notebook on Google Colab' href='https://colab.research.google.com/github/Abhijeet-Pitumbur/Xray-Xplorer/blob/main/Xray-Xplorer.ipynb' target='_blank' draggable='false' tabindex='-1'>
+                            <img class='footer-button' src='{{ url_for("static", filename="icons/colab.svg") }}' alt='Colab' draggable='false'/>
+                        </a>
+                        <a class='footer-tooltip' data-footer-tooltip='View dissertation report on Google Drive' href='https://bit.ly/abhijt-xray-xplorer-report' target='_blank' draggable='false' tabindex='-1'>
+                            <img class='footer-button' src='{{ url_for("static", filename="icons/document.svg") }}' alt='Document' draggable='false'/>
+                        </a>
+                        <a id='disclaimerButton' class='footer-tooltip' data-footer-tooltip='View disclaimer' draggable='false' tabindex='-1'>
+                            <img class='footer-button' src='{{ url_for("static", filename="icons/disclaimer.svg") }}' alt='Disclaimer' draggable='false'/>
+                        </a>
+                    </div>
+                    <!-- Footer text -->
+                    <p class='footer-text'>Abhijeet Pitumbur © 2023</p>
+                </div>
+            </div>
