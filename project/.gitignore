@@ -1,0 +1,17 @@
+# .gitignore
+__pycache__/
+*.py[cod]
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+# Ignore virtual environment directories
+venv/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp

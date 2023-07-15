@@ -1,0 +1,41 @@
+<!-- Results page -->
+            <div id='resultsPage' class='results-page'>
+                <div class='results-container'>
+                    <!-- Logo -->
+                    <div class='logo no-select'>
+                        <img src='{{ url_for("static", filename="icons/logo.svg") }}' alt='Xray Xplorer' draggable='false'/>
+                    </div>
+                    <!-- Results title -->
+                    <h2 class='results-title'>Analysis Results</h2>
+                    <div class='prediction-class-container'>
+                        <!-- Prediction class -->
+                        <h2 id='predictionClass' class='prediction-class'></h2>
+                        <!-- Prediction icon -->
+                        <span id='predictionWarning' class='prediction-icon prediction-tooltip no-select' data-prediction-tooltip-title='No Chest X-Ray Detected' data-prediction-tooltip-text='The uploaded image may not be a chest X-ray. The accuracy of classification and visualizations could be adversely affected, potentially leading to nonsensical visual output. Please upload a clear chest X-ray for optimal results.'>
+                            <img src='{{ url_for("static", filename="icons/warning.svg") }}' alt='Warning' draggable='false'/>
+                        </span>
+                        <span id='predictionBadge' class='prediction-icon prediction-tooltip no-select' data-prediction-tooltip-title='High Model Confidence' data-prediction-tooltip-text='While the model indicates a high probability for this classification, it is not infallible. Always cross-check with the visualizations and consider the entire clinical scenario for optimal decision-making.'>
+                            <img src='{{ url_for("static", filename="icons/badge.svg") }}' alt='Badge' draggable='false'/>
+                        </span>
+                    </div>
+                    <!-- Results images -->
+                    <div class='results-images-container'>
+                        <div class='results-image'>
+                            <img id='originalImage' src='' alt='Original'/>
+                            <h3 class='results-image-title'>Original</h3>
+                        </div>
+                        <div class='results-image'>
+                            <img id='heatmapImage' src='' alt='Heatmap'/>
+                            <h3 class='results-image-title'>Heatmap</h3>
+                        </div>
+                        <div class='results-image'>
+                            <img id='superimposedImage' src='' alt='Superimposed'/>
+                            <h3 class='results-image-title'>Superimposed</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Home button -->
+                <div id='homeButton' class='home-button no-select'>
+                    <img src='{{ url_for("static", filename="icons/close.svg") }}' alt='Close' draggable='false'/>
+                </div>
+            </div>

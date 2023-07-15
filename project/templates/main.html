@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <!-- Abhijeet Pitumbur © Xray Xplorer 2023 -->
+    <head>
+        <!-- Metadata -->
+        <meta charset='utf-8'>
+        <title>Xray Xplorer · COVID-19 Detection in Chest X-Ray Images</title>
+        <meta name='author' content='Abhijeet Pitumbur'>
+        <meta name='robots' content='index, follow'>
+        <meta name='theme-color' content='#CFDBFF'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta name='description' content='Xray Xplorer · Detect and Visualize COVID-19 in Chest X-Ray Images Using Artificial Intelligence · Abhijeet Pitumbur'>
+        <!-- Icons -->
+        <link rel='icon' type='image/svg+xml' href='{{ url_for("static", filename="icons/favicon.svg") }}'>
+        <link rel='alternate icon' type='image/png' href='{{ url_for("static", filename="icons/favicon.png") }}'>
+        <!-- Fonts -->
+        <link rel='preconnect' href='https://fonts.googleapis.com'>
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='anonymous'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap'>
+        <link rel='preload' href='https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2' as='font' type='font/woff2' crossorigin='anonymous'>
+        <link rel='preload' href='https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2' as='font' type='font/woff2' crossorigin='anonymous'>
+        <!-- Stylesheets -->
+        <link rel='stylesheet' type='text/css' href='{{ url_for("static", filename="stylesheets/main.css") }}'>
+    </head>
+    <body>
+        <!-- No script -->
+        <noscript>
+            <div class='no-script'>Your browser does not support JavaScript, or it is disabled. This website requires JavaScript to function properly.</div>
+        </noscript>
+        {% include 'splash.html' %}
+        {% include 'home.html' %}
+        {% include 'processing.html' %}
+        {% include 'results.html' %}
+        <!-- Background circles -->
+        <div class='background-circle background-circle-1'></div>
+        <div class='background-circle background-circle-2'></div>
+        <div class='background-circle background-circle-3'></div>
+        <div class='background-circle background-circle-4'></div>
+        <div class='background-circle background-circle-5'></div>
+        <!-- Drag-and-drop overlay -->
+        <div id='dragAndDropOverlay' class='drag-and-drop-overlay no-select'>
+            <div class='drag-and-drop-text'>Drop image anywhere</div>
+        </div>
+        <!-- Modal -->
+        <div id='modal' class='modal'>
+            <div class='modal-content'>
+                <!-- Modal header -->
+                <div class='modal-header'>
+                    <img class='modal-icon no-select' src='{{ url_for("static", filename="icons/warning.svg") }}' alt='Warning' draggable='false'/>
+                    <h2 id='modalTitle'></h2>
+                </div>
+                <!-- CLose modal button -->
+                <div id='closeModalButton' class='close-modal-button no-select'>
+                    <img src='{{ url_for("static", filename="icons/close.svg") }}' alt='Close' draggable='false'/>
+                </div>
+                <!-- Modal text -->
+                <p id='modalText'></p>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js' integrity='sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js' integrity='sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+        <script src='{{ url_for("static", filename="scripts/main.js") }}'></script>
+    </body>
+</html>

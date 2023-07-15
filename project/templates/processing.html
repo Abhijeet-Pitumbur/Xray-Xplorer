@@ -1,0 +1,12 @@
+<!-- Processing page -->
+            <div id='processingPage' class='processing-page'>
+                <!-- Logo -->
+                <div class='logo no-select'>
+                    <img src='{{ url_for("static", filename="icons/logo.svg") }}' alt='Xray Xplorer' draggable='false'/>
+                </div>
+                <!-- Processsing title -->
+                <h2 class='processing-title'>Processing...</h2>
+                <p class='processing-text'>Please wait a moment</p>
+                <!-- Processing animation -->
+                <div id='processingAnimation' class='processing-animation' data-processing-animation-path='{{ url_for("static", filename="animations/processing.json") }}'></div>
+            </div>
